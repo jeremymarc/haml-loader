@@ -5,5 +5,5 @@ module.exports = function(source) {
   hamlc = require("haml-coffee");
   query = loaderUtils.parseQuery(this.query);
   result = hamlc.render(source, query, {escapeHtml: false});
-  return "module.exports = " + JSON.stringify(result) + ";";
+  return JSON.stringify(result);
 };
